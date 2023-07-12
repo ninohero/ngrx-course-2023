@@ -51,6 +51,7 @@ const routes: Routes = [
     MatProgressSpinnerModule,
     MatListModule,
     MatToolbarModule,
+    StoreModule.forRoot({}),
     AuthModule.forRoot()
   ],
   bootstrap: [AppComponent]
