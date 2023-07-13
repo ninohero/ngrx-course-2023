@@ -48,8 +48,6 @@ export class LoginComponent implements OnInit {
 
           console.log('New Login Action:', newLoginAction);
 
-          debugger;
-
           this.store.dispatch(newLoginAction);
 
           this.router.navigateByUrl('/courses');

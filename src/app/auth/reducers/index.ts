@@ -29,8 +29,6 @@ export const authReducer = createReducer(
   on(AuthActions.login, (state, action) => {
     console.log('Calling login reducer');
 
-    debugger;
-
     return {
       user: action.user
     }
