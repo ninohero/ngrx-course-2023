@@ -23,7 +23,6 @@ import {EntityDataModule} from '@ngrx/data';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthGuard } from './auth/auth.guard';
 
-
 const routes: Routes = [
   {
     path: 'courses',
@@ -35,8 +34,6 @@ const routes: Routes = [
     redirectTo: '/'
   }
 ];
-
-
 
 @NgModule({
   declarations: [
@@ -53,8 +50,10 @@ const routes: Routes = [
     MatProgressSpinnerModule,
     MatListModule,
     MatToolbarModule,
+    AuthModule.forRoot(),
     StoreModule.forRoot({}),
-    AuthModule.forRoot()
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([])
   ],
   bootstrap: [AppComponent]
 })
